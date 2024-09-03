@@ -1,16 +1,20 @@
 ---
+import BentoGrid from "@/components/sections/bentogrid.astro";
+import Features from "@/components/sections/features.astro";
+import HeroLanding from "@/components/sections/hero-landing.astro";
+import InfoLanding from "@/components/sections/info-landing.astro";
 
+
+import { infos } from "@/config/landing";
+import MainLayout from "@/layouts/main-layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Landing">
+  <HeroLanding />
+  
+  <BentoGrid />
+  <InfoLanding data={infos[0]} reverse={true} />
+  <!-- <InfoLanding data={infos[1]} /> -->
+  <Features />
+  
+</MainLayout>

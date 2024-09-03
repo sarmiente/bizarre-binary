@@ -1,0 +1,67 @@
+---
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+import { siteConfig } from "@/config/site";
+---
+
+<section class="space-y-6 py-12 sm:py-20 lg:py-20">
+  <div class="container flex max-w-5xl flex-col items-center gap-5 text-center">
+    <a
+      href="https://instagram.com/sarpin.co"
+      class={cn(
+        buttonVariants({ variant: "outline", size: "sm", rounded: "full" }),
+        "px-4"
+      )}
+      target="_blank"
+    >
+      <span class="mr-3">🎉</span>Siguenos en{" "}
+      <Icon name="instagram" class="ml-2 size-3.5" />
+    </a>
+
+    <h1
+      class="text-balance font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[66px]"
+    >
+    Ayudamos a transformar
+     {" "}
+      <span class="text-gradient_indigo-purple font-extrabold">
+        productos y marcas
+      </span>
+    </h1>
+
+    <p
+      class="max-w-2xl text-balance leading-normal text-muted-foreground sm:text-xl sm:leading-8"
+    >
+        Llevamos tu idea a la web con diseños que capturan la esencia de tu negocio.
+    </p>
+
+    <div class="flex justify-center space-x-2 md:space-x-4">
+      <a
+        href="/pricing"
+        class={cn(buttonVariants({ size: "lg", rounded: "full" }), "gap-2")}
+      >
+        <span>Precios</span>
+        <Icon name="lucide:arrow-right" class="size-4" />
+      </a>
+      <a
+        href={siteConfig.links.github}
+        target="_blank"
+        rel="noreferrer"
+        class={cn(
+          buttonVariants({
+            variant: "outline",
+            size: "lg",
+            rounded: "full",
+          }),
+          "px-5"
+        )}
+      >
+        <Icon name="two-lines" class="mr-2 size-4" />
+        <p>
+          <span class="hidden sm:inline-block">Explorar Soluciones</span> Web{" "}
+          <!-- <span class="font-semibold">{nFormatter(stars)}</span> -->
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
