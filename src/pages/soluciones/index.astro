@@ -1,0 +1,63 @@
+---
+import PageHeader from "../../components/page-header.astro";
+import { Badge } from "../../components/ui/badge";
+import MainLayout from "../../layouts/main-layout.astro";
+import { Icon } from "astro-icon/components";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("soluciones");
+
+---
+
+<MainLayout title="Soluciones">
+  <section class="container max-w-screen-lg space-y-6 pt-12">
+    <PageHeader
+      heading="Soluciones Sarpin"
+      text="Te escuchamos y te guiamos hacia la mejor solución web para tu empresa o emprendimiento. Nuestra asesoría es gratuita, comunicate con nosotros y descubre cómo podemos ayudarte a destacar online con sitios web 100% garantizados."
+    />
+
+    <ul class="pt-6">
+      {
+        posts.map((post) => (
+          <li class="flex flex-col max-md:gap-y-4 md:flex-row w-full">
+            <div class="md:basis-32 lg:basis-56 shrink-0 grow-0">
+              <div class="md:sticky md:top-24 w-auto mr-6">
+                <a
+                  href={`/soluciones/${post.slug}`}
+                  class="flex flex-col gap-y-2 pb-4"
+                >
+                  <Badge
+                    variant="default"
+                    radius="lg"
+                    className="w-18 h-10 justify-center text-md bg_release_version text-white"
+                  >
+                    {post.data.versionNumber}
+                  </Badge>
+                 
+                </a>
+              </div>
+            </div>
+
+            <div class="prose dark:prose-invert prose-img:rounded-3xl max-w-none w-full pb-24">
+              <div class="grid pt-1 w-full items-start gap-10 rounded-3xl overflow-hidden border p-10 md:grid-cols-1 bg-background">
+                  <div class="grid text-justify">
+                      <h3 class="text-xl font-bold sm:text-2xl">
+                        {post.data.title}
+                      </h3>
+                  <div>
+                      <p class="text-md font-medium text-muted-foreground">
+                        {post.data.description}
+                      </p>
+                  </div>      
+                 </div>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</MainLayout>

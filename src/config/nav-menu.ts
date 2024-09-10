@@ -8,8 +8,8 @@ export const navMenuConfig: NavMenuConfig = {
       href: "/",
     },
     {
-      title: "Nosotros",
-      href: "/nosotros",
+      title: "Precios",
+      href: "/pricing",
     },
     {
       title: "Portafolio",
@@ -23,41 +23,41 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Landing Page",
-          href: "/landing",
-          description: "A landing page template with differents sections.",
+          href: "/soluciones/landing-pages",
+          description: "",
           image: "/images/examples/landing.jpg",
         },
         {
           title: "Tienda Online",
-          href: "/releases",
-          description: "A reproduction of Starlog template with Tailwind CSS.",
+          href: "/soluciones/tiendas-online",
+          description: "",
           image: "/images/examples/changelog.jpg",
         },
         {
           title: "Corporativa",
-          href: "/waitlist",
+          href: "/soluciones/corporativa",
           description:
-            "A waitlist form using Astro DB, React Hook Form & Sonner. Static page.",
+            "",
           image: "/images/examples/waitlist.jpg",
           forceReload: true,
         },
         {
           title: "Blog",
-          href: "/pricing",
-          description: "Pricing cards, FAQs and more content with price.",
+          href: "/soluciones/blog",
+          description: "",
           image: "/images/examples/pricing.jpg",
         },
         {
           title: "Portafolios",
-          href: "/about",
-          description: "A simple page with a masonry gallery and little text.",
+          href: "/soluciones/portafolios",
+          description: "",
           image: "/images/examples/about.jpg",
         },
         {
           title: "Newsletters",
-          href: "/newsletter",
+          href: "/soluciones/newsletters",
           description:
-            "A newsletter form using Astro DB & Simple Stack Form. Counter display!",
+            "",
           image: "/images/examples/newsletter.jpg",
         },
       ],
@@ -88,28 +88,7 @@ export const navMenuConfig: NavMenuConfig = {
           image: "/images/examples/animes.jpg",
           launched: true,
         },
-        {
-          title: "Blog DB",
-          href: "/blog-db",
-          description:
-            "Blog built using Astro DB. With categories, views & likes.",
-          // image: "/images/examples/blog-db.jpg",
-          disabled: true,
-        },
-        {
-          title: "Ecommerce",
-          href: "/products",
-          disabled: true,
-          description: "Ecommerce pages fetching data from an API.",
-          // image: "/images/examples/ecommerce.jpg",
-        },
-        {
-          title: "Authentification",
-          href: "/auth",
-          description: "Implement an authentification using Astro DB & Lucia",
-          // image: "/images/examples/auth.jpg",
-          disabled: true,
-        },
+        
       ],
     },
   ]

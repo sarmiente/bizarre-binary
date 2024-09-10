@@ -2,91 +2,67 @@ import type { InfoLdg } from "@/types";
 
 export const infos: InfoLdg[] = [
   {
-    title: "Empower your projects",
-    description:
-      "Unlock the full potential of your projects with our open-source SaaS platform. Collaborate seamlessly, innovate effortlessly, and scale limitlessly.",
-    image: "/images/blog/placeholder-about.jpg",
+    title: "Potencia tus proyectos",
+    description: "Desbloquea todo el potencial de tus proyectos desde el diseño y desarrollo web hasta el marketing y la analítica, te ayudamos a crear una presencia en línea sólida y atractiva que impulse tus resultados.",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     list: [
       {
-        title: "Collaborative",
-        description: "Work together with your team members in real-time.",
+        title: "Enfoque Colaborativo",
+        description: "Trabaja junto con los miembros de tu equipo en tiempo real.",
         icon: "lucide:laptop",
       },
       {
-        title: "Innovative",
-        description: "Stay ahead of the curve with access constant updates.",
+        title: "Desarrollo Innovador",
+        description: "Mantente a la vanguardia con acceso a actualizaciones constantes.",
         icon: "lucide:settings",
       },
       {
-        title: "Scalable",
-        description:
-          "Our platform offers the scalability needed to adapt to your needs.",
+        title: "Soluciones Escalable",
+        description: "Con nuestras soluciones ofrecemos la escalabilidad necesaria para adaptars tu negocio a las necesidades del mercado.",
         icon: "lucide:search",
       },
-    ],
-  },
-  {
-    title: "Seamless Integration",
-    description:
-      "Integrate our open-source SaaS seamlessly into your existing workflows. Effortlessly connect with your favorite tools and services for a streamlined experience.",
-    image: "/images/blog/placeholder-about.jpg",
-    list: [
-      {
-        title: "Flexible",
-        description:
-          "Customize your integrations to fit your unique requirements.",
-        icon: "lucide:laptop",
-      },
-      {
-        title: "Efficient",
-        description: "Streamline your processes and reducing manual effort.",
-        icon: "lucide:search",
-      },
-      {
-        title: "Reliable",
-        description:
-          "Rely on our robust infrastructure and comprehensive documentation.",
-        icon: "lucide:settings",
-      },
-    ],
-  },
+    ]
+    
+  }
+  
 ];
 
 export const features = [
   {
-    title: "Feature 1",
+    title: "Landing Pages",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Página de destino diseñada para captar la atención de los visitantes y convertirlos en clientes, perfecta para campañas y promociones.",
+    link: "/soluciones/landing-pages",
   },
   {
-    title: "Feature 2",
+    title: "Tienda Online",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Plataforma de comercio electrónico que permite a los clientes comprar productos o servicios, con opciones integradas de pago.",
+    link: "/soluciones/tienda-online",
   },
   {
-    title: "Feature 3",
+    title: "Corporativa",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Sitio web profesional que refleja la identidad y valores de tu empresa, ideal para comunicar misión y servicios con una presencia sólida.",
+    link: "/soluciones/corporativa",
   },
   {
-    title: "Feature 4",
+    title: "Blog",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Espacio dinámico para compartir artículos, noticias y contenido relevante, diseñado para atraer y mantener el interés de tu audiencia.",
+    link: "/soluciones/blogs",
   },
   {
-    title: "Feature 5",
+    title: "Portafolios",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
+      "Vitrina en línea para mostrar tu trabajo, proyectos o creatividad, destacando tus habilidades y atrayendo nuevas oportunidades.",
+      link: "/soluciones/portafolios",
   },
   {
-    title: "Feature 6",
+    title: "Newsletters",
     description:
-      "Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.",
-    link: "/",
+      "Herramienta para crear y distribuir boletines informativos desde tu sitio web, manteniendo a tu audiencia informada y conectada.",
+    link: "/soluciones/newsletters",
   },
 ];
 

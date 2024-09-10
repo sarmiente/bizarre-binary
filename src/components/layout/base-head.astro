@@ -37,8 +37,8 @@ const {
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title ? `${title} | Astronomy` : "Astronomy"}</title>
-<meta name="title" content={title ? `${title} | Astronomy` : "Astronomy"} />
+<title>{title ? `${title} | Sarpin.co` : "Sarpin.co"}</title>
+<meta name="title" content={title ? `${title} | Sarpin.co` : "Sarpin.co"} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
@@ -48,12 +48,6 @@ const {
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Dark mode with prevent flickering flash between navigations -->
 <script is:inline>

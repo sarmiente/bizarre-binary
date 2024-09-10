@@ -1,5 +1,5 @@
 ---
-import { NewsletterForm } from "@/components/forms/newsletter-form";
+
 import { ThemeToggle } from "@/components/theme-toggle";
 import { footerLinks, siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -37,46 +37,44 @@ const { className } = Astro.props;
         </div>
       ))
     }
-    <div class="flex flex-col items-end md:col-span-2">
-      Form Newsletter coming soon!
-      <!-- <NewsletterForm client:only="react" /> -->
-    </div>
+    
   </div>
 
   <div class="border-t py-4">
     <div class="container flex items-center justify-between">
-      <!-- <span class="text-muted-foreground text-sm">
-        Copyright &copy; 2024. All rights reserved.
-      </span> -->
+  <span class="text-muted-foreground text-sm">
+    Todos los derechos reservados.
+      </span> 
       <p class="text-left text-sm text-muted-foreground">
-        Built by{" "}
+        Copyright &copy; 2024 Sarpin Devs. {" "}
+        
+         Hospedado en{" "}
         <a
-          href={siteConfig.links.twitter}
+          href="https://cloudflare.com"
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
         >
-          mickasmt
+          Cloudflare
         </a>
-        . Hosted on{" "}
-        <a
-          href="https://vercel.com"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          Vercel
-        </a>.
       </p>
 
       <div class="flex items-center gap-3">
         <a
-          href={siteConfig.links.github}
+          href={siteConfig.links.instagram}
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
         >
-          <Icon name="github" class="size-5" />
+          <Icon name="instagram" class="size-6" />
+        </a>
+        <a
+          href={siteConfig.links.facebook}
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          <Icon name="facebook" class="size-6" />
         </a>
         <ThemeToggle client:load />
       </div>

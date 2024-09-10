@@ -40,7 +40,7 @@ const guides = defineCollection({
   }),
 });
 
-const releases = defineCollection({
+const soluciones = defineCollection({
   // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
@@ -50,10 +50,8 @@ const releases = defineCollection({
       image: z.object({
         src: image(),
         alt: z.string(),
-      }),
-      // Transform string to Date object
-      date: z.date({ coerce: true }),
+      })
     }),
 });
 
-export const collections = { blog, docs, guides, releases };
+export const collections = { blog, docs, guides, soluciones };
