@@ -7,16 +7,9 @@ import { Icon } from "astro-icon/components";
 
 <section class="space-y-6 py-12 sm:py-20 lg:py-20">
   <div class="container flex max-w-5xl flex-col items-center gap-5 text-center">
-    <a
-      href="https://instagram.com/sarpin.co"
-      class={cn(
-        buttonVariants({ variant: "outline", size: "sm", rounded: "full" }),
-        "px-4"
-      )}
-      target="_blank"
-    >
+    <a href="https://instagram.com/sarpin.co" class={cn(buttonVariants({ variant: "outline", size: "sm", rounded: "full" }), "px-4")} target="_blank">
       <span class="mr-3">🎉</span>Siguenos en{" "}
-      <Icon name="instagram" class="ml-2 size-5" />
+        <Icon name="instagram" class="ml-2 size-5" />
     </a>
 
     <h1
@@ -36,6 +29,7 @@ import { Icon } from "astro-icon/components";
     </p>
 
     <div class="flex justify-center space-x-2 md:space-x-4">
+      {/*
       <a
         href="/pricing"
         class={cn(buttonVariants({ size: "lg", rounded: "full" }), "gap-2")}
@@ -43,6 +37,7 @@ import { Icon } from "astro-icon/components";
         <span>Precios</span>
         <Icon name="lucide:arrow-right" class="size-4" />
       </a>
+      */}
       <a
         href="/soluciones"
         target="_blank"

@@ -1,0 +1,91 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+import MainLayout from "@/layouts/main-layout.astro";
+import { cn } from "@/lib/utils";
+import { Icon } from "astro-icon/components";
+
+const precios = [
+  {
+    title: "Básico",
+    description: "Ideal para Páginas de Aterrizaje (Landing Pages)",
+    price: "$799.000",
+      items: [
+        "Dominio por 1 año", 
+        "Hosting por 1 año", 
+        "Certificado SSL",
+        "Correo corporativo",
+        "Copias de Seguridad"
+      ]
+  },
+  {
+    title: "Profesional",
+    description: "Ideal para Blogs, Portafolios y Boletines Informativos (Newsletters)",
+    price: "$999.000",
+      items: [
+          "Dominio por 1 año", 
+          "Hosting por 1 año",
+          "Acceso a cPanel", 
+          "Certificado SSL",
+          "Correo corporativo",
+          "Copias de Seguridad"
+      ]
+  },
+  {
+    title: "Premium",
+    description: "Ideal para Tiendas Online (eCommerce) | Proyectos Corporativos",
+    price: "$1.299.000",
+      items: [
+          "Dominio por 1 año", 
+          "Hosting por 1 año",
+          "Optimizacion SEO", 
+          "Acceso a cPanel",
+          "Certificado SSL",
+          "Correo corporativo",
+          "Copias de Seguridad"
+      ]
+  }
+];
+---
+
+<MainLayout title="Precios" mainClass="flex-1 bg-background-200">
+  <section class="container flex flex-col gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
+    {precios.map((precio) => (
+      <div class="mx-auto pb-10 flex w-full  flex-col gap-4 md:max-w-[58rem]">
+          <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+            {precio.title}
+          </h2>
+
+          <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            {precio.description}
+          </p>
+
+        <div class="grid w-full items-start gap-10 rounded-3xl overflow-hidden border p-6 md:grid-cols-[1fr_200px] bg-background">
+          <div class="grid gap-6">
+            <h3 class="text-xl font-bold sm:text-2xl">
+              ¿Que incluye el plan {precio.title}?
+            </h3>
+            <ul class="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+              {precio.items.map((item) => (
+                <li  class="flex items-center" >
+                  <Icon name="lucide:check" class="mr-2 size-4" /> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4 text-center">
+            <div>
+              <h4 class="text-3xl font-bold">{precio.price}</h4>
+              <p class="text-sm font-medium text-muted-foreground">
+                Pago Anual
+              </p>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=573002982949" class={cn(buttonVariants({ size: "lg" }))}>
+                Adquirir
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    ))}
+  </section>
+</MainLayout>

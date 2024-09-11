@@ -3,6 +3,7 @@ export const prerender = false;
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { TextArea } from "@/components/ui/textarea";
 import MainLayout from "@/layouts/main-layout.astro";
 import { cn } from "@/lib/utils";
 import { Icon } from "astro-icon/components";
@@ -64,17 +65,9 @@ const count = waiting[0].count;
         <div class="space-y-3">
           <Icon name="lucide:mail" class="size-10" />
           <h1 class="text-2xl font-heading tracking-wide">
-            Subscribe to the newsletter
+            Ponte en contacto con nosotros!
           </h1>
-          <p class="text-sm text-muted-foreground">
-            <b>{count} people</b> already joined the newsletter!
-            <br />
-            Fill out the form below to obtain a monthly summary of information around
-            UX/UI!
-            <br />
-            Check <a href="/waitlist" class="underline">here</a> for use React Hook
-            Form and Sonner.
-          </p>
+          
         </div>
 
         <form
@@ -83,6 +76,18 @@ const count = waiting[0].count;
           transition:name="form-newsletter"
           transition:animate="none"
         >
+
+        <label
+            for="name"
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Nombre
+          </label>
+          <Input
+            id="name"
+            autoComplete="off"
+            placeholder="Nombre"
+                    />
           <label
             for="email"
             class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -95,9 +100,13 @@ const count = waiting[0].count;
             placeholder="janedoe@example.com"
             {...newsletterForm.inputProps.email}
           />
-          <p class="text-muted-foreground text-[13px]">
-            <i>Unique email please. Errors with duplicates!</i>
-          </p>
+          <label
+            for="email"
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Mensaje
+          </label>
+          <TextArea />
           <!-- {res?.fieldErrors?.email?.map((error) => <p class="text-[#ff6166] text-[13px]">{error}</p>)} -->
 
           {
@@ -115,15 +124,15 @@ const count = waiting[0].count;
               >
                 <Icon name="lucide:info" class="size-5" />
                 <p>
-                  {cookie ? "You are subscribed!" : null}
-                  {error ? "Something wrong! Try again please." : null}
+                  {cookie ? "Mensaje enviado!" : null}
+                  {error ? "Algo salio mal! Intentalo de nuevo por favor." : null}
                   {res?.fieldErrors?.email ? res?.fieldErrors?.email : null}
                 </p>
               </div>
             ) : null
           }
 
-          <Button type="submit" className="mt-4 w-full">Submit</Button>
+          <Button type="submit" className="mt-4 w-full">Enviar</Button>
         </form>
       </div>
     </div>

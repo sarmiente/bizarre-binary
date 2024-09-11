@@ -9,7 +9,7 @@ export const navMenuConfig: NavMenuConfig = {
     },
     {
       title: "Precios",
-      href: "/pricing",
+      href: "/precios",
     },
     {
       title: "Portafolio",
@@ -21,6 +21,19 @@ export const navMenuConfig: NavMenuConfig = {
      {
       title: "Soluciones",
       items: [
+        {
+          title: "Blogs",
+          href: "/soluciones/blogs",
+          description: "",
+          image: "/images/examples/pricing.jpg",
+        },
+        {
+          title: "Corporativa",
+          href: "/soluciones/corporativa",
+          description: "",
+          image: "/images/examples/waitlist.jpg",
+          forceReload: true,
+        },
         {
           title: "Landing Page",
           href: "/soluciones/landing-pages",
@@ -34,20 +47,6 @@ export const navMenuConfig: NavMenuConfig = {
           image: "/images/examples/changelog.jpg",
         },
         {
-          title: "Corporativa",
-          href: "/soluciones/corporativa",
-          description:
-            "",
-          image: "/images/examples/waitlist.jpg",
-          forceReload: true,
-        },
-        {
-          title: "Blog",
-          href: "/soluciones/blog",
-          description: "",
-          image: "/images/examples/pricing.jpg",
-        },
-        {
           title: "Portafolios",
           href: "/soluciones/portafolios",
           description: "",
@@ -56,8 +55,7 @@ export const navMenuConfig: NavMenuConfig = {
         {
           title: "Newsletters",
           href: "/soluciones/newsletters",
-          description:
-            "",
+          description: "",
           image: "/images/examples/newsletter.jpg",
         },
       ],
@@ -68,27 +66,11 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Explora",
       items: [
         {
-          title: "Static Blog",
+          title: "Blog",
           href: "/blog",
-          description: "A Markdown/MDX blog built using Content Collections.",
+          description: "Encuentra nuestros ultimos articulos",
           image: "/images/examples/static-blog.jpg",
         },
-        {
-          title: "Docs",
-          href: "/docs/getting-started",
-          description:
-            "A Markdown/MDX docs site built using Content Collections.",
-          image: "/images/examples/documentation.jpg",
-        },
-        {
-          title: "Anime List",
-          href: "/animes",
-          description:
-            "Fetch anime content from an graphql endpoint. Tabs component.",
-          image: "/images/examples/animes.jpg",
-          launched: true,
-        },
-        
       ],
     },
   ]
