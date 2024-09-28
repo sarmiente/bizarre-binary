@@ -42,9 +42,6 @@ if (cookie) {
 }
 
 // Fetch count of all email in waitlist
-const waiting = await db
-  .select({ count: sql<number>`count(*)`.mapWith(Number) })
-  .from(WaitingList);
 
 // With Fetch API:
 // const response = await fetch(Astro.url.origin + "/api/waitlist");
