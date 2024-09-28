@@ -65,8 +65,10 @@ const precios = [
               ¿Que incluye el plan {precio.title}?
             </h3>
             <ul class="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+              
               {precio.items.map((item) => (
                 <li  class="flex items-center" >
+                 
                   <Icon name="lucide:check" class="mr-2 size-4" /> {item}
                 </li>
               ))}
