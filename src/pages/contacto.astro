@@ -45,7 +45,6 @@ if (cookie) {
 const waiting = await db
   .select({ count: sql<number>`count(*)`.mapWith(Number) })
   .from(WaitingList);
-const count = waiting[0].count;
 
 // With Fetch API:
 // const response = await fetch(Astro.url.origin + "/api/waitlist");

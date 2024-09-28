@@ -28,11 +28,12 @@ export function getPagerForDoc(slug: string) {
 }
 
 // @ts-ignore
-export function flatten(links: { items? }[]) {
-  return links.reduce((flat, link) => {
+export function flatten(links) {
+  return links.reduce((flat: string | any[], link: { items: any; }) => {
     return flat.concat(link.items ? flatten(link.items) : link);
   }, []);
 }
+
 
 const { slug } = Astro.props;
 const pager = getPagerForDoc(slug);
