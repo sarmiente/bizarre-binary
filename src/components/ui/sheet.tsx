@@ -2,6 +2,7 @@ import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 import { cn } from "@/lib/utils"
 
@@ -15,7 +16,7 @@ const SheetPortal = ({
   className,
   ...props
 }: SheetPrimitive.DialogPortalProps & { className?: string }) => (
-  <div className={cn(className)}>
+  <div  className={cn(className)}>
     <SheetPrimitive.Portal {...props} />
   </div>
 )
@@ -61,7 +62,7 @@ interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
   VariantProps<typeof sheetVariants> { }
 
-const SheetContent = React.forwardRef<
+  const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "right", className, children, ...props }, ref) => (
@@ -69,9 +70,13 @@ const SheetContent = React.forwardRef<
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
+      aria-describedby={undefined}
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
+      <VisuallyHidden>
+        <SheetTitle>Accessible Title</SheetTitle>
+      </VisuallyHidden>
       {children}
       <SheetPrimitive.Close className="absolute right-4 top-7 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="size-6" />
@@ -79,7 +84,7 @@ const SheetContent = React.forwardRef<
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
-))
+));
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
 const SheetHeader = ({

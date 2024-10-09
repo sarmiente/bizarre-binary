@@ -1,7 +1,7 @@
 import type { SidebarNavItem, SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Sarpin Devs - Sarpin.co",
+  name: "Sarpin Devs",
   description:
     "Expertos en desarrollo web en Barranquilla. Diseños personalizados para tu empresa. Contáctanos y obtén una asesoría profesional para impulsar tu presencia en línea.",
   url: "",

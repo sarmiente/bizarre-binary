@@ -10,15 +10,9 @@ import simpleStackForm from "simple-stack-form";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost/",
+  site: "https://sarpindevs.netlify.app/",
   integrations: [
-    mdx({
-      syntaxHighlight: "shiki",
-      shikiConfig: {
-        theme: "github-dark-dimmed",
-      },
-      gfm: true,
-    }),
+    mdx(),
     icon(),
     sitemap(),
     react(),

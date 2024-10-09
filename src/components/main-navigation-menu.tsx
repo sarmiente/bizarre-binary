@@ -10,6 +10,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
 import { Badge } from "@/components/ui/badge";
 import { navMenuConfig } from "@/config/nav-menu";
 import type { MenuItem } from "@/types";
