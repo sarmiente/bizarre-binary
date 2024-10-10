@@ -24,18 +24,9 @@ const { className } = Astro.props;
       <a href="/" class="hidden items-center space-x-2 md:flex">
           <Image alt="" src={DarkLogo} class="dark:hidden" />
               <Image alt="" src={LightLogo} class="hidden dark:inline-block " />
-  
-        {
-          /*
-        <span class="hidden font-bold sm:inline-block">
-          {siteConfig.name}
-        </span>
-          */
-        }
-
       </a>
 
-      <slot name="mobile-nav-header" />
+        <slot name="mobile-nav-header" />
 
       <div class="hidden md:flex">
         <slot name="left-header" />

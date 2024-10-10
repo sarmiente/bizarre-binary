@@ -10,10 +10,6 @@ export const navMenuConfig: NavMenuConfig = {
     {
       title: "Precios",
       href: "/precios",
-    },
-    {
-      title: "Portafolio",
-      href: "/portafolio",
     }
   ],
  
@@ -71,6 +67,10 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Encuentra nuestros ultimos articulos",
           image: "/images/examples/static-blog.jpg",
         },
+        {
+          title: "Portafolio",
+          href: "/portafolio",
+        }
       ],
     },
   ]
