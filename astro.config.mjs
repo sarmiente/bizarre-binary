@@ -10,7 +10,7 @@ import simpleStackForm from "simple-stack-form";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://sarpindevs.netlify.app/",
+  site: "https://sarpindevs.netlify.app",
   integrations: [
     mdx(),
     icon(),
