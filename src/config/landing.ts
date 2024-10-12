@@ -1,10 +1,10 @@
-import type { InfoLdg } from "@/types";
 
-export const infos: InfoLdg[] = [
+// LISTA DE Features en el Landing
+
+export const infos = [
   {
     title: "Potencia tus proyectos",
     description: "Desbloquea todo el potencial de tus proyectos desde el diseño y desarrollo web hasta el marketing y la analítica, te ayudamos a crear una presencia en línea sólida y atractiva que impulse tus resultados.",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     list: [
       {
         title: "Enfoque Colaborativo",
@@ -26,6 +26,9 @@ export const infos: InfoLdg[] = [
   }
   
 ];
+
+
+// LISTA DE Features en soluciones
 
 export const features = [
   {
@@ -65,6 +68,8 @@ export const features = [
     link: "/soluciones/newsletters",
   },
 ];
+
+// LISTA DE Testimonios
 
 export const testimonials = [
   {

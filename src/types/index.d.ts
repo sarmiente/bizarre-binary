@@ -98,9 +98,3 @@ export type InfoList = {
   description: string;
 };
 
-export type InfoLdg = {
-  title: string;
-  image: string;
-  description: string;
-  list: InfoList[];
-}

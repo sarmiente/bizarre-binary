@@ -1,13 +1,8 @@
 ---
 import { cn } from "@/lib/utils";
-import type { InfoLdg } from "@/types";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-
-interface Props {
-  reverse?: boolean;
-  data: InfoLdg;
-}
+import Team from "../../assets/team.svg";
 
 const { reverse, data } = Astro.props;
 ---
@@ -27,7 +22,7 @@ const { reverse, data } = Astro.props;
       </p>
       <dl class="mt-6 space-y-4 leading-7">
         {
-          data.list.map((item) => {
+          data.list.map((item: { icon: any; title: unknown; description: unknown; }) => {
             return (
               <div class="relative pl-8">
                 <dt class="font-semibold">
@@ -55,7 +50,7 @@ const { reverse, data } = Astro.props;
       <div class="relative aspect-video">
         <Image
           class="size-full object-cover object-center"
-          src={data.image}
+          src={Team}
           alt={data.title}
           width={1000}
           height={500}

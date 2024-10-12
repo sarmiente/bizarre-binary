@@ -4,6 +4,13 @@ import { Image } from "astro:assets";
 import { hobbies } from "@/config/about.ts";
 import { Button } from "@/components/ui/button";
 import { Icon } from "astro-icon/components";
+import urlOne from "../assets/portafolio/102shots_so.png";
+import urlTwo from "../assets/portafolio/397shots_so.png";
+import urlThree from "../assets/portafolio/599shots_so.png";
+import urlFour from "../assets/portafolio/673shots_so.png";
+
+
+
 ---
 
 <MainLayout title="Portafolio" description="Diseño web creativo y responsivo para potenciar tu presencia digital y atraer más clientes. Impulsa tu negocio con una experiencia de usuario excepcional.">
@@ -40,51 +47,59 @@ import { Icon } from "astro-icon/components";
             <div class="space-y-4 md:space-y-6">
               <Image crossorigin="anonymous"
                 class="h-full w-auto object-cover overflow-hidden rounded-xl"
-                src={hobbies[0].image}
-                alt={hobbies[0].alt}
+                src={urlOne}
+                alt=""
                 width={800}
                 height={1226}
                 loading="eager"/>
+    
               <div class="h-52 overflow-hidden rounded-xl">
                 <Image crossorigin="anonymous"
                   class="w-full h-full object-cover"
-                  src={hobbies[1].image}
-                  alt={hobbies[1].alt}
+                  src={urlFour}
+                  alt=""
                   width={800}
                   height={1334}
                 />
               </div>
+             
+      
             </div>
 
             {/* Second Column */}
             <div class="space-y-4 md:space-y-6">
+           
               <div class="h-48 overflow-hidden rounded-xl">
                 <Image crossorigin="anonymous"
                   class="w-full h-full object-cover"
-                  src={hobbies[2].image}
-                  alt={hobbies[2].alt}
+                  src={urlOne}
+                  alt=""
                   width={800}
                   height={983}
                   loading="eager"
                 />
               </div>
+           
               <Image crossorigin="anonymous"
                 class="rounded-xl"
-                src={hobbies[3].image}
-                alt={hobbies[3].alt}
+                src={urlTwo}
+                alt=""
                 width={800}
                 height={1108}
                 loading="eager"
               />
-              <div class="relative h-48 overflow-hidden rounded-xl">
+          
+               <div class="relative h-48 overflow-hidden rounded-xl">
                 <Image crossorigin="anonymous"
                   class="w-full h-full object-cover"
-                  src={hobbies[4].image}
-                  alt={hobbies[4].alt}
+                  src={urlTwo}
+                  alt=""
                   width={1260}
                   height={750}
                 />
               </div>
+             
+            
             </div>
 
             {/* Third Column */}
@@ -92,30 +107,30 @@ import { Icon } from "astro-icon/components";
               <div class="h-56 overflow-hidden rounded-xl">
                 <Image crossorigin="anonymous"
                   class="w-full h-full object-cover"
-                  src={hobbies[5].image}
-                  alt={hobbies[5].alt}
+                  src={urlThree}
+                  alt=""
                   width={800}
                   height={1334}
                   loading="eager"
                 />
               </div>
               <div class="h-80 w-full overflow-hidden rounded-xl xl:h-[28rem]">
-                <Image
-                  class="w-full h-full object-cover"
-                  src={hobbies[6].image}
-                  alt={hobbies[6].alt}
-                  width={801}
-                  height={2477}
-                />
+                <Image crossorigin="anonymous"
+                src={urlFour}
+                alt=""
+                width={800}
+                height={900}
+                loading="eager"
+              />
               </div>
             </div>
 
-            {/* Fourth Column */}
+            {/* Fourth Column  */}
             <div class="space-y-4 md:space-y-6">
               <div class="overflow-hidden rounded-xl bg-white">
                 <Image crossorigin="anonymous"
-                  src={hobbies[7].image}
-                  alt={hobbies[7].alt}
+                  src={urlFour}
+                  alt=""
                   width={800}
                   height={900}
                   loading="eager"
@@ -123,14 +138,16 @@ import { Icon } from "astro-icon/components";
               </div>
               <div class="overflow-hidden rounded-xl bg-white">
                 <Image crossorigin="anonymous"
-                  src={hobbies[8].image}
-                  alt={hobbies[8].alt}
+                  src={urlOne}
+                  alt=""
                   width={800}
                   height={900}
                 />
               </div>
             </div>
+            
           </div>
+         
         </div>
       </div>
     </div>
